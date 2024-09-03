@@ -1,0 +1,216 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    list-style: none;
+    text-decoration: none;   
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul { padding: 0; margin: 0; }
+
+.container_whatAPP {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 330px;
+    margin: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 10px;
+    & #close_ModalAPP {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        background-color: rgb(255, 29, 29);
+        border-radius: 50%;
+        z-index: 999;
+        cursor: pointer;
+        display: none;
+        transition: rotate .3s ease-in-out;
+        &:hover { 
+            rotate: 180deg;
+        }
+    }
+
+    & .modalAPP_inter {
+        background-color: white;
+        position: relative;
+        box-shadow: 2px 2px 10px #cccccc;
+        border-radius: 10px;
+        height: 0px;
+        overflow: hidden;
+        transition: height .5s ease;
+        & p {
+            background-color: #0dc152;
+            color: white;
+            margin: 0;
+            padding: 0;
+            padding: 10px 20px 20px 20px;
+            line-height: 1.4;
+            font-size: 13px;
+            font-weight: normal;   
+            border-radius: 10px 10px 10px 10px;    
+            & strong {
+                font-size: 15px;
+            }
+        }
+        & .bloqueLink_padre {
+            position: relative;
+            padding: 20px 20px 10px 20px;
+            & ul {
+                & li {
+                    & .bloqueLink {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        position: relative;
+                        padding: 0px 10px;
+                        & img {
+                            width: 55px;
+                            height: 55px;
+                            border-radius: 50%;
+                            object-fit: cover;
+                        }
+                        &:hover {
+                            background-color: rgb(245, 245, 245);
+                        }
+                        & .lap_relative-img {
+                            position: relative;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            & .svg_whatAPP {
+                                position: absolute;
+                                bottom: -5px;
+                                right: -5px;
+                                & img {
+                                    width: 20px;
+                                    height: 20px;
+                                }
+                            }
+                        }
+
+                        & .info {
+                            display: flex;
+                            flex-direction: column;
+                            & .experincia {
+                                font-size: 12px;
+                                font-weight: 500;
+                                color: rgb(160, 160, 160);
+
+                            }
+                            & .name {
+                                font-weight: 600;
+                                transform: translate(0px, -5px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .line_space {
+            width: 100%;
+            height: 1px;
+            background-color: rgb(208, 208, 208);
+            margin: 10px 0px;
+        }
+    }
+
+    & .bloqueAPP {
+        float: right;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        gap: 20px;
+        &::after {
+            content: '';
+            width: 50px;
+            height: 50px;
+            background-color: #0dc15253;
+            position: absolute;
+            border-radius: 50%;
+            animation: pulse 1s linear infinite;
+            z-index: -1;
+        }
+        
+        & img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+    to {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .container_whatAPP {
+        margin: 20px;
+        width: calc(100% - 40px);
+    }
+}
+</style>
+<div class="container_whatAPP absolute">
+    <svg id="close_ModalAPP" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-x" viewBox="0 0 16 16">
+        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+    </svg>
+    <section class="modalAPP_inter" id="APP_modalOpen">
+        <p><strong>¿Necesita asesoría?</strong> Haga clic en uno de nuestros asesores y nos pondremos en contacto con usted a la mayor brevedad posible. 👉🏼</p>
+        <div class="bloqueLink_padre">
+            <ul>
+                <li>
+                    <a href="" class="bloqueLink">
+                        <div class="lap_relative-img">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/upload-imgnat0651.appspot.com/o/TrabajosPersonales%2Fweb-photo.webp?alt=media&token=e35efcd9-2a16-40f6-bfa6-7c74e84e5865" alt="">
+                            <div class="svg_whatAPP">
+                               <img src="https://cdn-icons-png.flaticon.com/128/3670/3670051.png" alt="">
+                            </div>
+                        </div>
+                        <article class="info">
+                            <span class="experincia">Desarrollador Web</span>
+                            <span class="name">Juan Esteban🚀</span>
+                        </article>
+                    </a>
+                </li>
+            </ul>
+            <div class="line_space"></div>
+            <ul>
+                <li>
+                    <a href="" class="bloqueLink">
+                        <div class="lap_relative-img">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHr74Pjdj__bQPnZK-BFujbwgnP1t5PIqkig&s" alt="">
+                            <div class="svg_whatAPP">
+                                <img src="https://cdn-icons-png.flaticon.com/128/3670/3670051.png" alt="">                            
+                            </div>
+                        </div>
+                        <article class="info">
+                            <span class="experincia">2 años de experincia</span>
+                            <span class="name">Cristian🔥</span>
+                        </article>
+                    </a>               
+                </li>
+            </ul>
+        </div>
+    </section>
+    <footer class="bloqueAPP" id="APP_Modal">
+        <img src="https://cdn-icons-png.flaticon.com/128/3670/3670051.png" alt="">
+    </footer>
+</div>
+

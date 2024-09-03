@@ -1,0 +1,32 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="">
+		<slot />
+	</body>
+
+	<script src="/src/data/animationCounter.js"></script>
+	<script src="/src/data/bottonWhatsapp.js"></script>
+	
+</html>
+<style is:global>	
+	@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+	* {margin: 0;padding: 0;text-decoration: none;list-style: none;box-sizing: border-box;   font-family: "Roboto", sans-serif;}	
+	body { box-sizing: border-box;}
+
+</style>

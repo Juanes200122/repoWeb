@@ -1,0 +1,109 @@
+<article class="w-[100%] flex justify-center items-center">
+    <div class="container-nav h-[60px] flex justify-between items-center max-w-1320 w-[100%]">
+        <figure class="figure_logo p-[10px] flex justify-between items-center">
+            <img src="logo/oriaWhite.png" alt="" width="120px">
+            <button id="menu_dropdown">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                </svg>
+            </button>   
+        </figure>
+        <nav class="nav_navbar flex justify-center items-center gap-5 px-[20px] relative" id="drop_menu">
+            <ul class="[&>li>a]:text-[#4d4d4d] flex justify-center items-center gap-5 [&>li>a]:text-[15px]">             
+                <li class="py-[8px] px-[1rem] rounded-lg">
+                    <a href="">Diseño Web</a>
+                </li>
+                <li class="dominio_new py-[8px] px-[1rem] rounded-lg relative">
+                    <a href="">Dominios</a>
+                </li>
+                <li class="py-[8px] px-[1rem] rounded-lg relative">
+                    <a href="">Precios</a>
+                </li>
+                <li class="py-[8px] px-[1rem] rounded-lg">
+                    <a href="">Contactanos</a>
+                </li>
+                <li class="py-[8px] px-[1rem] rounded-lg">
+                    <a href="">Soporte</a>
+                </li>
+            </ul>
+            <section class="flex justify-center items-center gap-4 flex-wrap">
+                <div class="flex justify-center items-center border border-[#191919]/70 py-[5px] px-[15px] rounded-lg gap-5">
+                    <img src="icons/star.png" alt="" width="15px">
+                    <span class="text-[13px] font-bold">1.4k</span>
+                </div>
+                <figure>
+                    <img src="icons/github.png" alt="" width="23px">
+                </figure>
+                <figure>
+                    <img src="icons/instagram.png" alt="" width="23px">
+                </figure>
+                <button class="text-white bg-indigo-600 py-[10px] px-[16px] rounded-lg text-[12px] ml-[20px] font-bold">PRICING & FAQ</button>
+            </section>
+        </nav>   
+    </div>
+</article>
+
+
+<style>
+    .dominio_new::before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        background-color: #6cc22f;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        border-radius: 50%;
+    }
+
+    .nav_navbar ul li:hover {
+        background-color: #f7f7f7;
+    }
+    #menu_dropdown {
+        display: none;
+    }
+
+    @media (max-width: 1150px) {
+        .container-nav {
+            flex-direction: column;
+            align-items: start;
+            & .figure_logo {
+                width: 100%;
+                position: relative;
+                z-index: 999999;
+                background-color: white;
+            }
+        }
+        .nav_navbar {
+            flex-direction: column;
+            width: 100%;
+            background-color: #ffffff;
+            z-index: 99999;
+            padding: 20px;
+            top: -400px;
+            transition: top .3s ease-in-out;
+            box-shadow: 2px 2px 10px rgb(228, 228, 228);
+        }
+        .nav_navbar ul {
+            flex-direction: column;
+        }
+        #menu_dropdown {
+            display: flex;
+            position: relative;
+        }
+    }
+</style>
+
+<script>
+
+    const menu_dropdown = document.getElementById('menu_dropdown');
+    const drop_menu = document.getElementById('drop_menu');
+
+    if (menu_dropdown && drop_menu) {
+        menu_dropdown.addEventListener('click', function() {
+            // Alterna la visibilidad del menú
+            drop_menu.style.top = drop_menu.style.top === '0px' ? '-400px' : '0px';
+        });
+    }
+
+</script>

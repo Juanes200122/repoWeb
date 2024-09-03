@@ -1,0 +1,34 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import Botton from "../components/bottonWhatsapp/botton.astro";
+
+import Navegacion_navNavbar from "../components/nav-navbar/Nav-navbar.astro";
+import DecorationNav from "../components/nav-navbar/DecorationNav.astro";
+
+import  SectionHome from "../components/sectionHome/SectionHome.astro";
+import  SectionHome_v2 from "../components/sectionHome/SectionHome_v2.astro";
+
+
+import SectionPrecios from "../components/sectionPrecios/SectionPrecios.astro";
+
+
+
+---
+
+<Layout title="Document">
+    <Botton />
+
+    <DecorationNav />
+    <Navegacion_navNavbar />
+    <div class="flex justify-center flex-col">
+        <SectionHome/>
+        <SectionHome_v2 />
+
+
+        
+        <!-- <SectionPrecios /> -->
+    </div>
+</Layout>
+
+

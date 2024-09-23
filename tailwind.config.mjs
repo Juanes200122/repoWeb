@@ -5,7 +5,7 @@ export default {
 	theme: {
 		extend: {
 			maxWidth: {
-				'1320': '1320px',
+				'1320': '1420px',
 			},
 		},
 	},
